@@ -34,8 +34,20 @@ SHIPPING_TIME = [
 ]
 
 
-DATA = [PRODUCT_QUALITY, SHIPPING_QUALITY, SELLER_QUALITY , SHIPPING_TIME]
-
+COMMENT_DATA = [PRODUCT_QUALITY, SHIPPING_QUALITY, SELLER_QUALITY , SHIPPING_TIME]
+TITLES = [
+"It saved my life", 
+"Better then my wife", 
+"THIS IS THE BEST", 
+"I just love it",
+"I use it everyday"
+"just love it",
+"traded my pig for this",
+"Don't kill, buy this",
+"SUPER good!!!",
+"I love it",
+"How didn't i got this before"
+] + PRODUCT_QUALITY
 
 
 class CommentGenerator(object):
@@ -52,12 +64,15 @@ class CommentGenerator(object):
 
 	def generateComment(self):
 		comment = ""
-		for sentence in DATA:
+		for sentence in COMMENT_DATA:
 			comment += sentence[random.randint(0,len(sentence) - 1)] 
 
-		return self.translate_comment(comment)
+		return self.translate(comment)
 
-	def translate_comment(self, comment):
+	def generateTitle(self):
+		return self.translate(TITLES[random.randint(0,len(TITLES) - 1)])
+
+	def translate(self, comment):
 		return self.translator.translate(comment, dest=self.language).text
 
 
