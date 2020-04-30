@@ -8,8 +8,10 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 
-from captcha_solver.nocaptcha import CapatchaSolver
 import marketplace_bot_consts as consts
+
+from captcha_solver.nocaptcha import CapatchaSolver
+from comment_generator import CommentGenerator
 
 
 class MarketplaceBot(object):
@@ -27,13 +29,6 @@ class MarketplaceBot(object):
         self.firstname = ""
         self.lastname = ""
 
-    def _make_undetectable_bot(self):
-        """
-        Add actions to make the bot undetectable by websites
-
-        :return Chrome driver: undetectable bot's driver
-        """
-
     def solve_captcha(self):
         """
         Verifies the bot by solving the website's captcha
@@ -50,6 +45,24 @@ class MarketplaceBot(object):
                 break
             except TimeoutException:
                 self.driver.refresh()
+
+    def get_review(self, language):
+        """
+        Obtains a generic review for a product
+        :param language: The language of the review to obtain
+        :return: str: The review in the selected language
+        """
+        comment_generator = CommentGenerator(language)
+        return comment_generator.generateComment()
+
+    def get_review_title(self, language):
+        """
+        Obtains a generic title for a review for a product
+        :param language: The language of the review to obtain
+        :return: str: The review in the selected language
+        """
+        comment_generator = CommentGenerator(language)
+        return comment_generator.generateComment()
 
     def start_browser(self):
         """
@@ -89,6 +102,13 @@ class MarketplaceBot(object):
         :param review: The review to place
         """
         raise NotImplementedError
+
+    def wait_for_page_change(self, current_page):
+        """
+        Wait for the current page to change
+        :param current_page: The current page
+        """
+        WebDriverWait(self.driver, 5).until(EC.url_changes(current_page))
 
     def register(self):
         """
