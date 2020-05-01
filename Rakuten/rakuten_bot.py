@@ -71,7 +71,7 @@ class RakutenBot(MarketplaceBot):
 
         # Generate and insert password
         alphabet = string.ascii_letters + string.digits
-        password = ''.join(secrets.choice(alphabet) for i in range(10))  # for a 20-character password
+        password = ''.join(secrets.choice(alphabet) for i in range(10))
         pass_field = self.driver.find_element_by_xpath('//*[@id="password"]')
         pass_field.send_keys(password)
 
