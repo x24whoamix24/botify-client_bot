@@ -62,7 +62,7 @@ class MarketplaceBot(object):
         :return: str: The review in the selected language
         """
         comment_generator = CommentGenerator(language)
-        return comment_generator.generateComment()
+        return comment_generator.generateTitle()
 
     def start_browser(self):
         """
@@ -95,11 +95,12 @@ class MarketplaceBot(object):
         """
         self.driver.quit()
 
-    def leave_review(self, product_url, review):
+    def leave_review(self, product_url, review, review_title):
         """
         Leaves a review in a product page
         :param product_url: the link to the product
         :param review: The review to place
+        :param review_title: The title for the review
         """
         raise NotImplementedError
 

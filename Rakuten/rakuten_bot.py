@@ -1,9 +1,11 @@
 import secrets
 import string
 import random
+import time
 
 import Rakuten.consts as consts
 from marketplace_bot import MarketplaceBot
+from captcha_solver.actions import ActionChains_Fake
 
 
 class RakutenBot(MarketplaceBot):
@@ -14,21 +16,47 @@ class RakutenBot(MarketplaceBot):
     def __init__(self):
         super().__init__()
 
-    def leave_review(self, product_url, review, stars=5):
+    def leave_review(self, product_url, review_title, review,stars=5):
         """
         Leave a review on a product
         :param product_url: The product url
+        :param review_title: The title for the review
         :param review: The review to leave
         :param stars: Amount of stars the product receives
         """
         self.driver.get(product_url)
+        time.sleep(2)
         # Click on review option
         self.driver.find_element_by_xpath('//*[@id="prdTitleBlock"]/div[3]/div[1]/p/span[2]').click()
         self.driver.find_element_by_xpath('//*[@id="reviewsTooltip"]/ul/li[1]').click()
+
+        time.sleep(2.5)
+
         # Give stars to the product
-        self.driver.find_element_by_xpath('//*[contains(@id, "starRating")]/span/a[{}]'.format(str(stars))).click()
+        # Select the star element
+        stars_element = self.driver.find_element_by_xpath('//*[contains(@id, "starRating")]')
+        actions = ActionChains_Fake(self.driver)
+
+        actions.move_to_element(stars_element)
+        # Here we preform an offset of a fixed x location from the starting star location
+        # This is done because the stars are selected by mouse movements
+        stars_to_move_from_start = stars - consts.STARTING_STAR_LOCATION
+        x_offset = consts.STAR_X_OFFSET * stars_to_move_from_start
+        actions.move_by_offset(x_offset, 0)
+        actions.click()
+        actions.perform()
+
+        # Write review title
+        self.driver.find_element_by_xpath('//*[contains(@id, "rtitle")]').send_keys(review_title)
+
+        # Write review content
+        self.driver.find_element_by_xpath('//*[contains(@id, "rdescription")]').send_keys(review)
+
         # Submit review
         self.driver.find_element_by_xpath('//*[contains(@id, "link_submit_review")]').click()
+        # Watt after submitting review
+        time.sleep(consts.WAIT_AFTER_REVIEW_TIME)
+
 
     def _fill_out_registration(self):
         """
@@ -90,6 +118,7 @@ class RakutenBot(MarketplaceBot):
         current_page = self.driver.current_url
 
         bt.click()
+        time.sleep(3)
         self.wait_for_page_change(current_page)
 
         self._fill_out_registration()
