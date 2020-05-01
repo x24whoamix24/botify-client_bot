@@ -26,6 +26,7 @@ class FnacBot(MarketplaceBot):
         # Click on review option
         self.driver.find_element_by_xpath('/html/body/div[2]/div[1]/div[1]'
                                           '/section[1]/div[2]/div[1]/span/span[1]').click()
+        time.sleep(2)
         self.driver.find_element_by_xpath('/html/body/div[2]/div[1]/div[1]/section[1]'
                                           '/div[2]/div[1]/span/span[3]/div/div[2]/div/a').click()
 
@@ -45,7 +46,9 @@ class FnacBot(MarketplaceBot):
         # Write review content
         self.driver.find_element_by_xpath('//*[@id="Review_Text"]').send_keys(review)
 
+
         # Submit review
+        self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
         self.driver.find_element_by_xpath('//*[@id="btnSubmit"]').click()
         # Watt after submitting review
         time.sleep(consts.WAIT_AFTER_REVIEW_TIME)
