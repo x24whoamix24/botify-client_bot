@@ -1,0 +1,4174 @@
+
+C:\Users\rkozo\Desktop\Library\Projects\botify\botify>python
+Python 3.7.0 (v3.7.0:1bf9cc5093, Jun 27 2018, 04:06:47) [MSC v.1914 32 bit (Intel)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import xml.dom.minidom
+>>> import urllib.request
+>>> file = urllib.request.urlopen('https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&login=PrimeValue&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28&kw=11%20Pi%C3%A8ces%20De%20R%C3%A9sistance%20Pour%20Exercice%20Fitness%20Gym%20Yoga%20Abs%20Ou%20De%20Pilates%20/%20Bandes%20D%C3%A9finies')
+>>> data = file.read()
+>>> pretty = dom.toprettyxml()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'dom' is not defined
+>>> file.close()
+>>> dom = xml.dom.minidom.parseString(data)
+>>> pretty = dom.toprettyxml()
+>>> print(pretty)
+<?xml version="1.0" ?>
+<listingresult xmlns="https://static.fr.shopping.rakuten.com/res/schema/listing" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://static.fr.shopping.rakuten.com/res/schema/listing https://static.fr.shopping.rakuten.com/res/schema/listing/listing.2018-06-28.xsd">
+
+
+        <request>
+
+
+                <version>2018-06-28</version>
+
+
+                <login>PrimeValue</login>
+
+
+
+                <kw>
+<![CDATA[11 PiÃ¨ces De RÃ©sistance Pour Exercice Fitness Gym Yoga Abs Ou De Pilates / Bandes DÃ©finies]]>               </kw>
+
+
+
+
+
+
+
+                <pagenumber>1</pagenumber>
+
+
+
+
+                <nbproductsperpage>20</nbproductsperpage>
+
+
+
+
+        </request>
+
+
+
+        <response>
+
+
+
+                <status>ok</status>
+
+
+                <lastversion>2018-06-28</lastversion>
+
+
+                <resultcount>20</resultcount>
+
+
+                <totalresultcount>57</totalresultcount>
+
+
+
+                <navigation>
+
+
+
+                        <selectedcategory>
+<![CDATA[11 Piã¨Ces De Rã©Sistance Pour Exercice Fitness Gym Yoga Abs Ou De Pilates / Bandes Dã©Finies]]>                       </selectedcategory>
+
+
+
+                        <categories>
+
+
+
+                                <category>
+
+
+                                        <link>
+
+
+                                                <label>
+<![CDATA[Livres]]>                                              </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&kw=11+Pi%C3%A8ces+De+R%C3%A9sistance+Pour+Exercice+Fitness+Gym+Yoga+Abs+Ou+De+Pilates+%2F+Bandes+D%C3%A9finies&login=PrimeValue&nav=Livres&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>                                            </url>
+
+
+                                        </link>
+
+
+                                        <resultcount>0</resultcount>
+
+
+                                </category>
+
+
+
+
+                                <category>
+
+
+                                        <link>
+
+
+                                                <label>
+<![CDATA[Musique]]>                                             </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&kw=11+Pi%C3%A8ces+De+R%C3%A9sistance+Pour+Exercice+Fitness+Gym+Yoga+Abs+Ou+De+Pilates+%2F+Bandes+D%C3%A9finies&login=PrimeValue&nav=Musique&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>                                           </url>
+
+
+                                        </link>
+
+
+                                        <resultcount>0</resultcount>
+
+
+                                </category>
+
+
+
+
+                                <category>
+
+
+                                        <link>
+
+
+                                                <label>
+<![CDATA[DVD & Blu-Ray]]>                                               </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&kw=11+Pi%C3%A8ces+De+R%C3%A9sistance+Pour+Exercice+Fitness+Gym+Yoga+Abs+Ou+De+Pilates+%2F+Bandes+D%C3%A9finies&login=PrimeValue&nav=Video&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>                                             </url>
+
+
+                                        </link>
+
+
+                                        <resultcount>0</resultcount>
+
+
+                                </category>
+
+
+
+
+                                <category>
+
+
+                                        <link>
+
+
+                                                <label>
+<![CDATA[Jeux vidéo & Consoles]]>                                               </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&kw=11+Pi%C3%A8ces+De+R%C3%A9sistance+Pour+Exercice+Fitness+Gym+Yoga+Abs+Ou+De+Pilates+%2F+Bandes+D%C3%A9finies&login=PrimeValue&nav=Jeux-Video-et-Consoles&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>                                            </url>
+
+
+                                        </link>
+
+
+                                        <resultcount>1</resultcount>
+
+
+                                </category>
+
+
+
+
+                                <category>
+
+
+                                        <link>
+
+
+                                                <label>
+<![CDATA[Téléphonie & GPS]]>                                            </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&kw=11+Pi%C3%A8ces+De+R%C3%A9sistance+Pour+Exercice+Fitness+Gym+Yoga+Abs+Ou+De+Pilates+%2F+Bandes+D%C3%A9finies&login=PrimeValue&nav=Tel-PDA&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>                                           </url>
+
+
+                                        </link>
+
+
+                                        <resultcount>9</resultcount>
+
+
+                                </category>
+
+
+
+
+                                <category>
+
+
+                                        <link>
+
+
+                                                <label>
+<![CDATA[Informatique & Tablettes]]>                                            </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&kw=11+Pi%C3%A8ces+De+R%C3%A9sistance+Pour+Exercice+Fitness+Gym+Yoga+Abs+Ou+De+Pilates+%2F+Bandes+D%C3%A9finies&login=PrimeValue&nav=Informatique&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>                                              </url>
+
+
+                                        </link>
+
+
+                                        <resultcount>23</resultcount>
+
+
+                                </category>
+
+
+
+
+                                <category>
+
+
+                                        <link>
+
+
+                                                <label>
+<![CDATA[Image & Son]]>                                         </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&kw=11+Pi%C3%A8ces+De+R%C3%A9sistance+Pour+Exercice+Fitness+Gym+Yoga+Abs+Ou+De+Pilates+%2F+Bandes+D%C3%A9finies&login=PrimeValue&nav=Hifi&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>                                              </url>
+
+
+                                        </link>
+
+
+                                        <resultcount>5</resultcount>
+
+
+                                </category>
+
+
+
+
+                                <category>
+
+
+                                        <link>
+
+
+                                                <label>
+<![CDATA[Maison]]>                                              </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&kw=11+Pi%C3%A8ces+De+R%C3%A9sistance+Pour+Exercice+Fitness+Gym+Yoga+Abs+Ou+De+Pilates+%2F+Bandes+D%C3%A9finies&login=PrimeValue&nav=Maison&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>                                            </url>
+
+
+                                        </link>
+
+
+                                        <resultcount>5</resultcount>
+
+
+                                </category>
+
+
+
+
+                                <category>
+
+
+                                        <link>
+
+
+                                                <label>
+<![CDATA[Electroménager]]>                                              </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&kw=11+Pi%C3%A8ces+De+R%C3%A9sistance+Pour+Exercice+Fitness+Gym+Yoga+Abs+Ou+De+Pilates+%2F+Bandes+D%C3%A9finies&login=PrimeValue&nav=Electromenager&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>                                            </url>
+
+
+                                        </link>
+
+
+                                        <resultcount>0</resultcount>
+
+
+                                </category>
+
+
+
+
+                                <category>
+
+
+                                        <link>
+
+
+                                                <label>
+<![CDATA[Vins & Gastronomie]]>                                          </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&kw=11+Pi%C3%A8ces+De+R%C3%A9sistance+Pour+Exercice+Fitness+Gym+Yoga+Abs+Ou+De+Pilates+%2F+Bandes+D%C3%A9finies&login=PrimeValue&nav=Vin-Saveur&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>                                                </url>
+
+
+                                        </link>
+
+
+                                        <resultcount>0</resultcount>
+
+
+                                </category>
+
+
+
+
+                                <category>
+
+
+                                        <link>
+
+
+                                                <label>
+<![CDATA[Bricolage]]>                                           </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&kw=11+Pi%C3%A8ces+De+R%C3%A9sistance+Pour+Exercice+Fitness+Gym+Yoga+Abs+Ou+De+Pilates+%2F+Bandes+D%C3%A9finies&login=PrimeValue&nav=bricolage&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>                                         </url>
+
+
+                                        </link>
+
+
+                                        <resultcount>0</resultcount>
+
+
+                                </category>
+
+
+
+
+                                <category>
+
+
+                                        <link>
+
+
+                                                <label>
+<![CDATA[Jardin & Piscine]]>                                            </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&kw=11+Pi%C3%A8ces+De+R%C3%A9sistance+Pour+Exercice+Fitness+Gym+Yoga+Abs+Ou+De+Pilates+%2F+Bandes+D%C3%A9finies&login=PrimeValue&nav=jardin&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>                                            </url>
+
+
+                                        </link>
+
+
+                                        <resultcount>0</resultcount>
+
+
+                                </category>
+
+
+
+
+                                <category>
+
+
+                                        <link>
+
+
+                                                <label>
+<![CDATA[Auto-Moto]]>                                           </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&kw=11+Pi%C3%A8ces+De+R%C3%A9sistance+Pour+Exercice+Fitness+Gym+Yoga+Abs+Ou+De+Pilates+%2F+Bandes+D%C3%A9finies&login=PrimeValue&nav=auto-moto&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>                                         </url>
+
+
+                                        </link>
+
+
+                                        <resultcount>0</resultcount>
+
+
+                                </category>
+
+
+
+
+                                <category>
+
+
+                                        <link>
+
+
+                                                <label>
+<![CDATA[Sports & Loisirs]]>                                            </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&kw=11+Pi%C3%A8ces+De+R%C3%A9sistance+Pour+Exercice+Fitness+Gym+Yoga+Abs+Ou+De+Pilates+%2F+Bandes+D%C3%A9finies&login=PrimeValue&nav=Loisirs&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>                                           </url>
+
+
+                                        </link>
+
+
+                                        <resultcount>22</resultcount>
+
+
+                                </category>
+
+
+
+
+                                <category>
+
+
+                                        <link>
+
+
+                                                <label>
+<![CDATA[Mode & Beauté]]>                                               </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&kw=11+Pi%C3%A8ces+De+R%C3%A9sistance+Pour+Exercice+Fitness+Gym+Yoga+Abs+Ou+De+Pilates+%2F+Bandes+D%C3%A9finies&login=PrimeValue&nav=Mode&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>                                              </url>
+
+
+                                        </link>
+
+
+                                        <resultcount>0</resultcount>
+
+
+                                </category>
+
+
+
+
+                                <category>
+
+
+                                        <link>
+
+
+                                                <label>
+<![CDATA[Jouets & Enfant]]>                                             </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&kw=11+Pi%C3%A8ces+De+R%C3%A9sistance+Pour+Exercice+Fitness+Gym+Yoga+Abs+Ou+De+Pilates+%2F+Bandes+D%C3%A9finies&login=PrimeValue&nav=Enfant&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>                                            </url>
+
+
+                                        </link>
+
+
+                                        <resultcount>0</resultcount>
+
+
+                                </category>
+
+
+
+
+                                <category>
+
+
+                                        <link>
+
+
+                                                <label>
+<![CDATA[Art & Collection]]>                                            </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&kw=11+Pi%C3%A8ces+De+R%C3%A9sistance+Pour+Exercice+Fitness+Gym+Yoga+Abs+Ou+De+Pilates+%2F+Bandes+D%C3%A9finies&login=PrimeValue&nav=Art-Collection&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>                                            </url>
+
+
+                                        </link>
+
+
+                                        <resultcount>0</resultcount>
+
+
+                                </category>
+
+
+
+
+
+                        </categories>
+
+
+
+                </navigation>
+
+
+
+                <products>
+
+
+
+                        <product>
+
+
+                                <productid>4504483554</productid>
+
+
+                                <category>
+<![CDATA[Loisirs_musculation-fitness]]>                         </category>
+
+
+                                <alias>sport_produit</alias>
+
+
+                                <headline>
+<![CDATA[Pilates Anneau Crescent Soutien Magique Fitness Circle Double Grip Poignées Résistance Full Body Toning Circle Training Boucle (Noir)]]>                               </headline>
+
+
+                                <caption>
+<![CDATA[Xinlan]]>                              </caption>
+
+
+                                <topic>
+<![CDATA[ Brique ]]>                            </topic>
+
+
+                                <offercounts>
+
+
+                                        <total>2</total>
+
+
+                                        <new>2</new>
+
+
+                                        <used>0</used>
+
+
+                                        <refurbishedNew>0</refurbishedNew>
+
+
+                                        <refurbishedUsed>0</refurbishedUsed>
+
+
+                                </offercounts>
+
+
+                                <bestprices>
+
+
+
+                                        <global>
+
+
+                                                <advertprice>
+
+
+                                                        <amount>10.86</amount>
+
+
+                                                        <currency>EUR</currency>
+
+
+                                                </advertprice>
+
+
+                                                <shippingcost>
+
+
+                                                        <amount>0.0</amount>
+
+
+                                                        <currency>EUR</currency>
+
+
+                                                </shippingcost>
+
+
+                                                <shippingtype>Normal</shippingtype>
+
+
+
+                                        </global>
+
+
+
+                                </bestprices>
+
+
+                                <url>
+<![CDATA[https://fr.shopping.rakuten.com/offer/buy/4504483554/pilates-anneau-crescent-soutien-magique-fitness-circle-double-grip-poignees-resistance-full-body-toning-circle-training-boucle-noir.html]]>
+                        </url>
+
+
+
+                                <image>
+
+
+
+                                        <url>
+<![CDATA[https://images.fr.shopping.rakuten.com/photo/1378637158_ML.jpg]]>                                      </url>
+
+
+
+                                </image>
+
+
+                                <references>
+
+
+
+                                        <barcode>7346949867575</barcode>
+
+
+
+                                        <partnumber>
+<![CDATA[PilatesCircle-Black-01S]]>                                     </partnumber>
+
+
+
+                                </references>
+
+
+                                <reviews>
+
+          </reviews>
+
+
+                                <breadcrumbselements>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Sports & Loisirs]]>                                            </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&login=PrimeValue&nav=Loisirs&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>                                               </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Musculation et fitness]]>                                              </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&login=PrimeValue&nav=Loisirs_musculation-fitness&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>
+                </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Brique]]>                                              </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&f10=brique-de-gym&login=PrimeValue&nav=Loisirs_musculation-fitness&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>
+                                </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                </breadcrumbselements>
+
+
+
+                        </product>
+
+
+
+                        <product>
+
+
+                                <productid>3874357063</productid>
+
+
+                                <category>
+<![CDATA[Loisirs_musculation-fitness]]>                         </category>
+
+
+                                <alias>sport_produit</alias>
+
+
+                                <headline>
+<![CDATA[Ecarteur Robuste de Jambe 3 Barre Extension Pour Entrainement Yoga / Arts Martiaux]]>                          </headline>
+
+
+                                <caption>
+<![CDATA[Xinlan]]>                              </caption>
+
+
+                                <topic>
+<![CDATA[Matériel de sport]]>                           </topic>
+
+
+                                <offercounts>
+
+
+                                        <total>1</total>
+
+
+                                        <new>1</new>
+
+
+                                        <used>0</used>
+
+
+                                        <refurbishedNew>0</refurbishedNew>
+
+
+                                        <refurbishedUsed>0</refurbishedUsed>
+
+
+                                </offercounts>
+
+
+                                <bestprices>
+
+
+
+                                        <global>
+
+
+                                                <advertprice>
+
+
+                                                        <amount>33.6</amount>
+
+
+                                                        <currency>EUR</currency>
+
+
+                                                </advertprice>
+
+
+                                                <shippingcost>
+
+
+                                                        <amount>0.0</amount>
+
+
+                                                        <currency>EUR</currency>
+
+
+                                                </shippingcost>
+
+
+                                                <shippingtype>Normal</shippingtype>
+
+
+
+                                        </global>
+
+
+
+                                </bestprices>
+
+
+                                <url>
+<![CDATA[https://fr.shopping.rakuten.com/offer/buy/3874357063/ecarteur-robuste-de-jambe-3-barre-extension-pour-entrainement-yoga-arts-martiaux.html]]>                          </url>
+
+
+
+                                <image>
+
+
+
+                                        <url>
+<![CDATA[https://images.fr.shopping.rakuten.com/photo/1256535361_ML.jpg]]>                                      </url>
+
+
+
+                                </image>
+
+
+                                <references>
+
+
+
+                                        <barcode>7360736858225</barcode>
+
+
+
+                                        <partnumber>
+<![CDATA[YogaLegStretcher-07S]]>                                        </partnumber>
+
+
+
+                                </references>
+
+
+                                <reviews>
+
+          </reviews>
+
+
+                                <breadcrumbselements>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Sports & Loisirs]]>                                            </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&login=PrimeValue&nav=Loisirs&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>                                               </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Musculation et fitness]]>                                              </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&login=PrimeValue&nav=Loisirs_musculation-fitness&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>
+                </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Accessoires musculation]]>                                             </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&f10=accessoires-musculation&login=PrimeValue&nav=Loisirs_musculation-fitness&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>
+                                                </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                </breadcrumbselements>
+
+
+
+                        </product>
+
+
+
+                        <product>
+
+
+                                <productid>3874357052</productid>
+
+
+                                <category>
+<![CDATA[Loisirs_musculation-fitness]]>                         </category>
+
+
+                                <alias>sport_produit</alias>
+
+
+                                <headline>
+<![CDATA[Écarteur pour Jambes en métal Noir]]>                          </headline>
+
+
+                                <caption>
+<![CDATA[Xinlan]]>                              </caption>
+
+
+                                <topic>
+<![CDATA[Matériel de sport]]>                           </topic>
+
+
+                                <offercounts>
+
+
+                                        <total>1</total>
+
+
+                                        <new>1</new>
+
+
+                                        <used>0</used>
+
+
+                                        <refurbishedNew>0</refurbishedNew>
+
+
+                                        <refurbishedUsed>0</refurbishedUsed>
+
+
+                                </offercounts>
+
+
+                                <bestprices>
+
+
+
+                                        <global>
+
+
+                                                <advertprice>
+
+
+                                                        <amount>26.99</amount>
+
+
+                                                        <currency>EUR</currency>
+
+
+                                                </advertprice>
+
+
+                                                <shippingcost>
+
+
+                                                        <amount>0.0</amount>
+
+
+                                                        <currency>EUR</currency>
+
+
+                                                </shippingcost>
+
+
+                                                <shippingtype>Normal</shippingtype>
+
+
+
+                                        </global>
+
+
+
+                                </bestprices>
+
+
+                                <url>
+<![CDATA[https://fr.shopping.rakuten.com/offer/buy/3874357052/ecarteur-pour-jambes-en-metal-noir.html]]>                                </url>
+
+
+
+                                <image>
+
+
+
+                                        <url>
+<![CDATA[https://images.fr.shopping.rakuten.com/photo/1256462807_ML.jpg]]>                                      </url>
+
+
+
+                                </image>
+
+
+                                <references>
+
+
+
+                                        <barcode>7360736858218</barcode>
+
+
+
+                                        <partnumber>
+<![CDATA[YogaLegStretcher-02S]]>                                        </partnumber>
+
+
+
+                                </references>
+
+
+                                <reviews>
+
+          </reviews>
+
+
+                                <breadcrumbselements>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Sports & Loisirs]]>                                            </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&login=PrimeValue&nav=Loisirs&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>                                               </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Musculation et fitness]]>                                              </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&login=PrimeValue&nav=Loisirs_musculation-fitness&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>
+                </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Traversin]]>                                           </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&f10=Traversin&login=PrimeValue&nav=Loisirs_musculation-fitness&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>
+                                </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                </breadcrumbselements>
+
+
+
+                        </product>
+
+
+
+                        <product>
+
+
+                                <productid>435642664</productid>
+
+
+                                <category>
+<![CDATA[Informatique_tablette]]>                               </category>
+
+
+                                <alias>pda_produit</alias>
+
+
+                                <headline>
+<![CDATA[Tablette Lenovo Yoga Tablet Pro- 32 Go 13.3 pouces Gris métal]]>                               </headline>
+
+
+                                <caption>
+<![CDATA[Lenovo]]>                              </caption>
+
+
+                                <topic>
+<![CDATA[ Tablette Lenovo Yoga Tablet 2 Pro-1380 ]]>                            </topic>
+
+
+                                <offercounts>
+
+
+                                        <total>1</total>
+
+
+                                        <new>0</new>
+
+
+                                        <used>1</used>
+
+
+                                        <refurbishedNew>0</refurbishedNew>
+
+
+                                        <refurbishedUsed>0</refurbishedUsed>
+
+
+                                </offercounts>
+
+
+                                <bestprices>
+
+
+
+                                        <global>
+
+
+                                                <advertprice>
+
+
+                                                        <amount>599.99</amount>
+
+
+                                                        <currency>EUR</currency>
+
+
+                                                </advertprice>
+
+
+                                                <shippingcost>
+
+
+                                                        <amount>3.99</amount>
+
+
+                                                        <currency>EUR</currency>
+
+
+                                                </shippingcost>
+
+
+                                                <shippingtype>Point de retrait So Colissimo</shippingtype>
+
+
+
+                                        </global>
+
+
+
+                                </bestprices>
+
+
+                                <url>
+<![CDATA[https://fr.shopping.rakuten.com/offer/buy/435642664/lenovo-yoga-tablet-2pro-1380-tablette.html]]>                              </url>
+
+
+
+                                <image>
+
+
+
+                                        <url>
+<![CDATA[https://images.fr.shopping.rakuten.com/photo/1078218038_ML.jpg]]>                                      </url>
+
+
+
+                                </image>
+
+
+                                <references>
+
+
+
+                                        <barcode>3612407794979</barcode>
+
+
+
+                                        <barcode>0888772779894</barcode>
+
+
+
+                                        <partnumber>
+<![CDATA[YOGA TABLET 2 PRO 1380F]]>                                     </partnumber>
+
+
+
+                                        <partnumber>
+<![CDATA[59428120]]>                                    </partnumber>
+
+
+
+                                </references>
+
+
+                                <reviews>
+
+
+
+                                        <averagenote>4.5</averagenote>
+
+
+                                        <count>6</count>
+
+
+
+                                </reviews>
+
+
+                                <breadcrumbselements>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Informatique & Tablettes]]>                                            </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&login=PrimeValue&nav=Informatique&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>                                          </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Tablette]]>                                            </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&login=PrimeValue&nav=Informatique_tablette&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>
+        </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Tablette  Lenovo]]>                                            </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&f1=Lenovo&login=PrimeValue&nav=Informatique_tablette&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>                                                  </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                </breadcrumbselements>
+
+
+
+                        </product>
+
+
+
+                        <product>
+
+
+                                <productid>4504483610</productid>
+
+
+                                <category>
+<![CDATA[Loisirs_musculation-fitness]]>                         </category>
+
+
+                                <alias>sport_produit</alias>
+
+
+                                <headline>
+<![CDATA[Yoga Roue L'accessoire indispensable au Yoga (Vert, Unique) - Noir]]>                          </headline>
+
+
+                                <caption>
+<![CDATA[Xinlan]]>                              </caption>
+
+
+                                <topic>
+<![CDATA[ Brique ]]>                            </topic>
+
+
+                                <offercounts>
+
+
+                                        <total>1</total>
+
+
+                                        <new>1</new>
+
+
+                                        <used>0</used>
+
+
+                                        <refurbishedNew>0</refurbishedNew>
+
+
+                                        <refurbishedUsed>0</refurbishedUsed>
+
+
+                                </offercounts>
+
+
+                                <bestprices>
+
+
+
+                                        <global>
+
+
+                                                <advertprice>
+
+
+                                                        <amount>21.99</amount>
+
+
+                                                        <currency>EUR</currency>
+
+
+                                                </advertprice>
+
+
+                                                <shippingcost>
+
+
+                                                        <amount>0.0</amount>
+
+
+                                                        <currency>EUR</currency>
+
+
+                                                </shippingcost>
+
+
+                                                <shippingtype>Normal</shippingtype>
+
+
+
+                                        </global>
+
+
+
+                                </bestprices>
+
+
+                                <url>
+<![CDATA[https://fr.shopping.rakuten.com/offer/buy/4504483610/yoga-roue-l-accessoire-indispensable-au-yoga-vert-unique-noir.html]]>                             </url>
+
+
+
+                                <image>
+
+
+
+                                        <url>
+<![CDATA[https://images.fr.shopping.rakuten.com/photo/1378716734_ML.jpg]]>                                      </url>
+
+
+
+                                </image>
+
+
+                                <references>
+
+
+
+                                        <barcode>7346949867629</barcode>
+
+
+
+                                        <partnumber>
+<![CDATA[YogaWheel-Black-01S]]>                                 </partnumber>
+
+
+
+                                </references>
+
+
+                                <reviews>
+
+          </reviews>
+
+
+                                <breadcrumbselements>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Sports & Loisirs]]>                                            </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&login=PrimeValue&nav=Loisirs&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>                                               </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Musculation et fitness]]>                                              </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&login=PrimeValue&nav=Loisirs_musculation-fitness&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>                                              </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Brique]]>                                              </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&f10=brique-de-gym&login=PrimeValue&nav=Loisirs_musculation-fitness&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>                                            </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                </breadcrumbselements>
+
+
+
+                        </product>
+
+
+
+                        <product>
+
+
+                                <productid>4718218823</productid>
+
+
+                                <category>
+<![CDATA[Loisirs_musculation-fitness]]>                         </category>
+
+
+                                <alias>sport_produit</alias>
+
+
+                                <headline>
+<![CDATA[Tapis De Gymnastique Yoga 2 Gym 115x115 Cm Fitness Sol Pliable Avec Poignée Sport Antidérapant Ogalbe Viala]]>                         </headline>
+
+
+                                <caption>
+<![CDATA[Ogalbe Viala]]>                                </caption>
+
+
+                                <topic>
+<![CDATA[ Tapis antidérapant ]]>                                </topic>
+
+
+                                <offercounts>
+
+
+                                        <total>1</total>
+
+
+                                        <new>1</new>
+
+
+                                        <used>0</used>
+
+
+                                        <refurbishedNew>0</refurbishedNew>
+
+
+                                        <refurbishedUsed>0</refurbishedUsed>
+
+
+                                </offercounts>
+
+
+                                <bestprices>
+
+
+
+                                        <global>
+
+
+                                                <advertprice>
+
+
+                                                        <amount>79.0</amount>
+
+
+                                                        <currency>EUR</currency>
+
+
+                                                </advertprice>
+
+
+                                                <shippingcost>
+
+
+                                                        <amount>0.0</amount>
+
+
+                                                        <currency>EUR</currency>
+
+
+                                                </shippingcost>
+
+
+                                                <shippingtype>Recommandé</shippingtype>
+
+
+
+                                        </global>
+
+
+
+                                </bestprices>
+
+
+                                <url>
+<![CDATA[https://fr.shopping.rakuten.com/offer/buy/4718218823/tapis-de-gymnastique-yoga-2-gym-115x115-cm-fitness-sol-pliable-avec-poignee-sport-antiderapant-ogalbe-viala.html]]>                               </url>
+
+
+
+                                <image>
+
+
+
+                                        <url>
+<![CDATA[https://images.fr.shopping.rakuten.com/photo/1391464997_ML.jpg]]>                                      </url>
+
+
+
+                                </image>
+
+
+                                <references>
+
+
+
+                                        <barcode>3276550053637</barcode>
+
+
+
+                                        <partnumber>
+<![CDATA[YOGA MAT 2 BURGONDY]]>                                 </partnumber>
+
+
+
+                                </references>
+
+
+                                <reviews>
+
+          </reviews>
+
+
+                                <breadcrumbselements>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Sports & Loisirs]]>                                            </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&login=PrimeValue&nav=Loisirs&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>                                               </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Musculation et fitness]]>                                              </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&login=PrimeValue&nav=Loisirs_musculation-fitness&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>                                              </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Tapis]]>                                               </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&f10=tapis-de-gym&login=PrimeValue&nav=Loisirs_musculation-fitness&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>                                             </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                </breadcrumbselements>
+
+
+
+                        </product>
+
+
+
+                        <product>
+
+
+                                <productid>4504483628</productid>
+
+
+                                <category>
+<![CDATA[Loisirs_musculation-fitness]]>                         </category>
+
+
+                                <alias>sport_produit</alias>
+
+
+                                <headline>
+<![CDATA[Yoga Design pour étirer, équilibrer, Augmenter la flexibilité et améliorer Le Bas du Dos - Violet]]>                           </headline>
+
+
+                                <caption>
+<![CDATA[Xinlan]]>                              </caption>
+
+
+                                <topic>
+<![CDATA[ Brique ]]>                            </topic>
+
+
+                                <offercounts>
+
+
+                                        <total>1</total>
+
+
+                                        <new>1</new>
+
+
+                                        <used>0</used>
+
+
+                                        <refurbishedNew>0</refurbishedNew>
+
+
+                                        <refurbishedUsed>0</refurbishedUsed>
+
+
+                                </offercounts>
+
+
+                                <bestprices>
+
+
+
+                                        <global>
+
+
+                                                <advertprice>
+
+
+                                                        <amount>22.99</amount>
+
+
+                                                        <currency>EUR</currency>
+
+
+                                                </advertprice>
+
+
+                                                <shippingcost>
+
+
+                                                        <amount>0.0</amount>
+
+
+                                                        <currency>EUR</currency>
+
+
+                                                </shippingcost>
+
+
+                                                <shippingtype>Normal</shippingtype>
+
+
+
+                                        </global>
+
+
+
+                                </bestprices>
+
+
+                                <url>
+<![CDATA[https://fr.shopping.rakuten.com/offer/buy/4504483628/yoga-design-pour-etirer-equilibrer-augmenter-la-flexibilite-et-ameliorer-le-bas-du-dos-violet.html]]>                             </url>
+
+
+
+                                <image>
+
+
+
+                                        <url>
+<![CDATA[https://images.fr.shopping.rakuten.com/photo/1378716826_ML.jpg]]>                                      </url>
+
+
+
+                                </image>
+
+
+                                <references>
+
+
+
+                                        <barcode>7346949867667</barcode>
+
+
+
+                                        <partnumber>
+<![CDATA[YogaWheel-Purple-01S]]>                                        </partnumber>
+
+
+
+                                </references>
+
+
+                                <reviews>
+
+          </reviews>
+
+
+                                <breadcrumbselements>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Sports & Loisirs]]>                                            </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&login=PrimeValue&nav=Loisirs&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>                                               </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Musculation et fitness]]>                                              </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&login=PrimeValue&nav=Loisirs_musculation-fitness&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>                                              </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Brique]]>                                              </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&f10=brique-de-gym&login=PrimeValue&nav=Loisirs_musculation-fitness&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>                                            </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                </breadcrumbselements>
+
+
+
+                        </product>
+
+
+
+                        <product>
+
+
+                                <productid>4504483630</productid>
+
+
+                                <category>
+<![CDATA[Loisirs_musculation-fitness]]>                         </category>
+
+
+                                <alias>sport_produit</alias>
+
+
+                                <headline>
+<![CDATA[Exercice Roue pour la Pose de la Roue de Yoga Dharma, pour L'étirement et L'amélioration des Postures]]>                               </headline>
+
+
+                                <caption>
+<![CDATA[Xinlan]]>                              </caption>
+
+
+                                <topic>
+<![CDATA[ Brique ]]>                            </topic>
+
+
+                                <offercounts>
+
+
+                                        <total>1</total>
+
+
+                                        <new>1</new>
+
+
+                                        <used>0</used>
+
+
+                                        <refurbishedNew>0</refurbishedNew>
+
+
+                                        <refurbishedUsed>0</refurbishedUsed>
+
+
+                                </offercounts>
+
+
+                                <bestprices>
+
+
+
+                                        <global>
+
+
+                                                <advertprice>
+
+
+                                                        <amount>24.99</amount>
+
+
+                                                        <currency>EUR</currency>
+
+
+                                                </advertprice>
+
+
+                                                <shippingcost>
+
+
+                                                        <amount>0.0</amount>
+
+
+                                                        <currency>EUR</currency>
+
+
+                                                </shippingcost>
+
+
+                                                <shippingtype>Normal</shippingtype>
+
+
+
+                                        </global>
+
+
+
+                                </bestprices>
+
+
+                                <url>
+<![CDATA[https://fr.shopping.rakuten.com/offer/buy/4504483630/exercice-roue-pour-la-pose-de-la-roue-de-yoga-dharma-pour-l-etirement-et-l-amelioration-des-postures.html]]>                              </url>
+
+
+
+                                <image>
+
+
+
+                                        <url>
+<![CDATA[https://images.fr.shopping.rakuten.com/photo/1378722137_ML.jpg]]>                                      </url>
+
+
+
+                                </image>
+
+
+                                <references>
+
+
+
+                                        <barcode>7346949867674</barcode>
+
+
+
+                                        <partnumber>
+<![CDATA[YogaWheel-Purple-02S]]>                                        </partnumber>
+
+
+
+                                </references>
+
+
+                                <reviews>
+
+          </reviews>
+
+
+                                <breadcrumbselements>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Sports & Loisirs]]>                                            </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&login=PrimeValue&nav=Loisirs&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>                                               </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Musculation et fitness]]>                                              </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&login=PrimeValue&nav=Loisirs_musculation-fitness&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>                                              </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Brique]]>                                              </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&f10=brique-de-gym&login=PrimeValue&nav=Loisirs_musculation-fitness&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>                                            </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                </breadcrumbselements>
+
+
+
+                        </product>
+
+
+
+                        <product>
+
+
+                                <productid>4504483616</productid>
+
+
+                                <category>
+<![CDATA[Loisirs_musculation-fitness]]>                         </category>
+
+
+                                <alias>sport_produit</alias>
+
+
+                                <headline>
+<![CDATA[Noir Flexibilité Aide pour Yoga Balle d'entraînement - 33cm x 13cm]]>                          </headline>
+
+
+                                <caption>
+<![CDATA[Xinlan]]>                              </caption>
+
+
+                                <topic>
+<![CDATA[ Brique ]]>                            </topic>
+
+
+                                <offercounts>
+
+
+                                        <total>1</total>
+
+
+                                        <new>1</new>
+
+
+                                        <used>0</used>
+
+
+                                        <refurbishedNew>0</refurbishedNew>
+
+
+                                        <refurbishedUsed>0</refurbishedUsed>
+
+
+                                </offercounts>
+
+
+                                <bestprices>
+
+
+
+                                        <global>
+
+
+                                                <advertprice>
+
+
+                                                        <amount>23.99</amount>
+
+
+                                                        <currency>EUR</currency>
+
+
+                                                </advertprice>
+
+
+                                                <shippingcost>
+
+
+                                                        <amount>0.0</amount>
+
+
+                                                        <currency>EUR</currency>
+
+
+                                                </shippingcost>
+
+
+                                                <shippingtype>Normal</shippingtype>
+
+
+
+                                        </global>
+
+
+
+                                </bestprices>
+
+
+                                <url>
+<![CDATA[https://fr.shopping.rakuten.com/offer/buy/4504483616/noir-flexibilite-aide-pour-yoga-balle-d-entrainement-33cm-x-13cm.html]]>                          </url>
+
+
+
+                                <image>
+
+
+
+                                        <url>
+<![CDATA[https://images.fr.shopping.rakuten.com/photo/1378716768_ML.jpg]]>                                      </url>
+
+
+
+                                </image>
+
+
+                                <references>
+
+
+
+                                        <barcode>7346949867636</barcode>
+
+
+
+                                        <partnumber>
+<![CDATA[YogaWheel-Black-02S]]>                                 </partnumber>
+
+
+
+                                </references>
+
+
+                                <reviews>
+
+          </reviews>
+
+
+                                <breadcrumbselements>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Sports & Loisirs]]>                                            </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&login=PrimeValue&nav=Loisirs&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>                                               </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Musculation et fitness]]>                                              </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&login=PrimeValue&nav=Loisirs_musculation-fitness&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>                                              </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Brique]]>                                              </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&f10=brique-de-gym&login=PrimeValue&nav=Loisirs_musculation-fitness&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>                                            </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                </breadcrumbselements>
+
+
+
+                        </product>
+
+
+
+                        <product>
+
+
+                                <productid>4504483624</productid>
+
+
+                                <category>
+<![CDATA[Loisirs_musculation-fitness]]>                         </category>
+
+
+                                <alias>sport_produit</alias>
+
+
+                                <headline>
+<![CDATA[Lab Roue de Yoga | Solidité maximale | Conçue pour améliorer Votre flexibilité - Rose]]>                               </headline>
+
+
+                                <caption>
+<![CDATA[Xinlan]]>                              </caption>
+
+
+                                <topic>
+<![CDATA[ Brique ]]>                            </topic>
+
+
+                                <offercounts>
+
+
+                                        <total>1</total>
+
+
+                                        <new>1</new>
+
+
+                                        <used>0</used>
+
+
+                                        <refurbishedNew>0</refurbishedNew>
+
+
+                                        <refurbishedUsed>0</refurbishedUsed>
+
+
+                                </offercounts>
+
+
+                                <bestprices>
+
+
+
+                                        <global>
+
+
+                                                <advertprice>
+
+
+                                                        <amount>22.99</amount>
+
+
+                                                        <currency>EUR</currency>
+
+
+                                                </advertprice>
+
+
+                                                <shippingcost>
+
+
+                                                        <amount>0.0</amount>
+
+
+                                                        <currency>EUR</currency>
+
+
+                                                </shippingcost>
+
+
+                                                <shippingtype>Normal</shippingtype>
+
+
+
+                                        </global>
+
+
+
+                                </bestprices>
+
+
+                                <url>
+<![CDATA[https://fr.shopping.rakuten.com/offer/buy/4504483624/lab-roue-de-yoga-solidite-maximale-concue-pour-ameliorer-votre-flexibilite-rose.html]]>                           </url>
+
+
+
+                                <image>
+
+
+
+                                        <url>
+<![CDATA[https://images.fr.shopping.rakuten.com/photo/1378716799_ML.jpg]]>                                      </url>
+
+
+
+                                </image>
+
+
+                                <references>
+
+
+
+                                        <barcode>7346949867643</barcode>
+
+
+
+                                        <partnumber>
+<![CDATA[YogaWheel-Pink-01S]]>                                  </partnumber>
+
+
+
+                                </references>
+
+
+                                <reviews>
+
+          </reviews>
+
+
+                                <breadcrumbselements>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Sports & Loisirs]]>                                            </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&login=PrimeValue&nav=Loisirs&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>                                               </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Musculation et fitness]]>                                              </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&login=PrimeValue&nav=Loisirs_musculation-fitness&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>                                              </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Brique]]>                                              </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&f10=brique-de-gym&login=PrimeValue&nav=Loisirs_musculation-fitness&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>                                            </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                </breadcrumbselements>
+
+
+
+                        </product>
+
+
+
+                        <product>
+
+
+                                <productid>4504483625</productid>
+
+
+                                <category>
+<![CDATA[Loisirs_musculation-fitness]]>                         </category>
+
+
+                                <alias>sport_produit</alias>
+
+
+                                <headline>
+<![CDATA[Exercice Roue Soulage les douleurs et le stress dans votre dos, poitrine, les hanches et les épaules - Rose]]>                         </headline>
+
+
+                                <caption>
+<![CDATA[Xinlan]]>                              </caption>
+
+
+                                <topic>
+<![CDATA[ Brique ]]>                            </topic>
+
+
+                                <offercounts>
+
+
+                                        <total>1</total>
+
+
+                                        <new>1</new>
+
+
+                                        <used>0</used>
+
+
+                                        <refurbishedNew>0</refurbishedNew>
+
+
+                                        <refurbishedUsed>0</refurbishedUsed>
+
+
+                                </offercounts>
+
+
+                                <bestprices>
+
+
+
+                                        <global>
+
+
+                                                <advertprice>
+
+
+                                                        <amount>24.99</amount>
+
+
+                                                        <currency>EUR</currency>
+
+
+                                                </advertprice>
+
+
+                                                <shippingcost>
+
+
+                                                        <amount>0.0</amount>
+
+
+                                                        <currency>EUR</currency>
+
+
+                                                </shippingcost>
+
+
+                                                <shippingtype>Normal</shippingtype>
+
+
+
+                                        </global>
+
+
+
+                                </bestprices>
+
+
+                                <url>
+<![CDATA[https://fr.shopping.rakuten.com/offer/buy/4504483625/exercice-roue-soulage-les-douleurs-et-le-stress-dans-votre-dos-poitrine-les-hanches-et-les-epaules-rose.html]]>                           </url>
+
+
+
+                                <image>
+
+
+
+                                        <url>
+<![CDATA[https://images.fr.shopping.rakuten.com/photo/1378716810_ML.jpg]]>                                      </url>
+
+
+
+                                </image>
+
+
+                                <references>
+
+
+
+                                        <barcode>7346949867650</barcode>
+
+
+
+                                        <partnumber>
+<![CDATA[YogaWheel-Pink-02S]]>                                  </partnumber>
+
+
+
+                                </references>
+
+
+                                <reviews>
+
+          </reviews>
+
+
+                                <breadcrumbselements>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Sports & Loisirs]]>                                            </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&login=PrimeValue&nav=Loisirs&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>                                               </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Musculation et fitness]]>                                              </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&login=PrimeValue&nav=Loisirs_musculation-fitness&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>                                              </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Brique]]>                                              </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&f10=brique-de-gym&login=PrimeValue&nav=Loisirs_musculation-fitness&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>                                            </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                </breadcrumbselements>
+
+
+
+                        </product>
+
+
+
+                        <product>
+
+
+                                <productid>4504483553</productid>
+
+
+                                <category>
+<![CDATA[Loisirs_musculation-fitness]]>                         </category>
+
+
+                                <alias>sport_produit</alias>
+
+
+                                <headline>
+<![CDATA[Cercle Pilates / anneau de yoga / Dual Grip Poignées (diamètre de 38cm) - Rose]]>                              </headline>
+
+
+                                <caption>
+<![CDATA[Xinlan]]>                              </caption>
+
+
+                                <topic>
+<![CDATA[ Brique ]]>                            </topic>
+
+
+                                <offercounts>
+
+
+                                        <total>1</total>
+
+
+                                        <new>1</new>
+
+
+                                        <used>0</used>
+
+
+                                        <refurbishedNew>0</refurbishedNew>
+
+
+                                        <refurbishedUsed>0</refurbishedUsed>
+
+
+                                </offercounts>
+
+
+                                <bestprices>
+
+
+
+                                        <global>
+
+
+                                                <advertprice>
+
+
+                                                        <amount>10.99</amount>
+
+
+                                                        <currency>EUR</currency>
+
+
+                                                </advertprice>
+
+
+                                                <shippingcost>
+
+
+                                                        <amount>0.0</amount>
+
+
+                                                        <currency>EUR</currency>
+
+
+                                                </shippingcost>
+
+
+                                                <shippingtype>Normal</shippingtype>
+
+
+
+                                        </global>
+
+
+
+                                </bestprices>
+
+
+                                <url>
+<![CDATA[https://fr.shopping.rakuten.com/offer/buy/4504483553/cercle-pilates-anneau-de-yoga-dual-grip-poignees-diametre-de-38cm-rose.html]]>                            </url>
+
+
+
+                                <image>
+
+
+
+                                        <url>
+<![CDATA[https://images.fr.shopping.rakuten.com/photo/1378637147_ML.jpg]]>                                      </url>
+
+
+
+                                </image>
+
+
+                                <references>
+
+
+
+                                        <barcode>7346949867568</barcode>
+
+
+
+                                        <partnumber>
+<![CDATA[PilatesCircle-Pink-01S]]>                                      </partnumber>
+
+
+
+                                </references>
+
+
+                                <reviews>
+
+          </reviews>
+
+
+                                <breadcrumbselements>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Sports & Loisirs]]>                                            </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&login=PrimeValue&nav=Loisirs&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>                                               </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Musculation et fitness]]>                                              </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&login=PrimeValue&nav=Loisirs_musculation-fitness&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>
+                </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Brique]]>                                              </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&f10=brique-de-gym&login=PrimeValue&nav=Loisirs_musculation-fitness&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>
+                                </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                </breadcrumbselements>
+
+
+
+                        </product>
+
+
+
+                        <product>
+
+
+                                <productid>4504483552</productid>
+
+
+                                <category>
+<![CDATA[Loisirs_musculation-fitness]]>                         </category>
+
+
+                                <alias>sport_produit</alias>
+
+
+                                <headline>
+<![CDATA[Anneau de pilates - équipement d´exercise pour un entraînement de la force et de la résistance efficace - Violet]]>                            </headline>
+
+
+                                <caption>
+<![CDATA[Xinlan]]>                              </caption>
+
+
+                                <topic>
+<![CDATA[ Brique ]]>                            </topic>
+
+
+                                <offercounts>
+
+
+                                        <total>1</total>
+
+
+                                        <new>1</new>
+
+
+                                        <used>0</used>
+
+
+                                        <refurbishedNew>0</refurbishedNew>
+
+
+                                        <refurbishedUsed>0</refurbishedUsed>
+
+
+                                </offercounts>
+
+
+                                <bestprices>
+
+
+
+                                        <global>
+
+
+                                                <advertprice>
+
+
+                                                        <amount>10.99</amount>
+
+
+                                                        <currency>EUR</currency>
+
+
+                                                </advertprice>
+
+
+                                                <shippingcost>
+
+
+                                                        <amount>0.0</amount>
+
+
+                                                        <currency>EUR</currency>
+
+
+                                                </shippingcost>
+
+
+                                                <shippingtype>Normal</shippingtype>
+
+
+
+                                        </global>
+
+
+
+                                </bestprices>
+
+
+                                <url>
+<![CDATA[https://fr.shopping.rakuten.com/offer/buy/4504483552/anneau-de-pilates-equipement-dexercise-pour-un-entrainement-de-la-force-et-de-la-resistance-efficace-violet.html]]>                               </url>
+
+
+
+                                <image>
+
+
+
+                                        <url>
+<![CDATA[https://images.fr.shopping.rakuten.com/photo/1378637137_ML.jpg]]>                                      </url>
+
+
+
+                                </image>
+
+
+                                <references>
+
+
+
+                                        <barcode>7346949867551</barcode>
+
+
+
+                                        <partnumber>
+<![CDATA[PilatesCircle-Pueple-01S]]>                                    </partnumber>
+
+
+
+                                </references>
+
+
+                                <reviews>
+
+          </reviews>
+
+
+                                <breadcrumbselements>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Sports & Loisirs]]>                                            </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&login=PrimeValue&nav=Loisirs&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>                                               </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Musculation et fitness]]>                                              </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&login=PrimeValue&nav=Loisirs_musculation-fitness&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>
+                </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Brique]]>                                              </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&f10=brique-de-gym&login=PrimeValue&nav=Loisirs_musculation-fitness&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>
+                                </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                </breadcrumbselements>
+
+
+
+                        </product>
+
+
+
+                        <product>
+
+
+                                <productid>4074672338</productid>
+
+
+                                <category>
+<![CDATA[Informatique_Cable]]>                          </category>
+
+
+                                <alias>mev_mat_periph</alias>
+
+
+                                <headline>
+<![CDATA[60 W 16.5 V 3.65A Power Adapter Chargeur pour Apple Macbook Pro 13 "A1435 A1465 A1425 A1502]]>                         </headline>
+
+
+                                <caption>
+<![CDATA[Générique]]>                           </caption>
+
+
+                                <topic>
+<![CDATA[Câble d'alimentation]]>                                </topic>
+
+
+                                <offercounts>
+
+
+                                        <total>2</total>
+
+
+                                        <new>2</new>
+
+
+                                        <used>0</used>
+
+
+                                        <refurbishedNew>0</refurbishedNew>
+
+
+                                        <refurbishedUsed>0</refurbishedUsed>
+
+
+                                </offercounts>
+
+
+                                <bestprices>
+
+
+
+                                        <global>
+
+
+                                                <advertprice>
+
+
+                                                        <amount>25.0</amount>
+
+
+                                                        <currency>EUR</currency>
+
+
+                                                </advertprice>
+
+
+                                                <shippingcost>
+
+
+                                                        <amount>0.0</amount>
+
+
+                                                        <currency>EUR</currency>
+
+
+                                                </shippingcost>
+
+
+                                                <shippingtype>Normal</shippingtype>
+
+
+
+                                        </global>
+
+
+
+                                </bestprices>
+
+
+                                <url>
+<![CDATA[https://fr.shopping.rakuten.com/offer/buy/4074672338/60-w-16-5-v-3-65a-power-adapter-chargeur-pour-apple-macbook-pro-13-a1435-a1465-a1425-a1502.html]]>                                </url>
+
+
+
+                                <image>
+
+
+
+                                        <url>
+<![CDATA[https://images.fr.shopping.rakuten.com/photo/1286497518_ML.jpg]]>                                      </url>
+
+
+
+                                </image>
+
+
+                                <references>
+
+
+
+                                        <partnumber>
+<![CDATA[Pour A1435 A1465 A1425 A1502]]>                                        </partnumber>
+
+
+
+                                </references>
+
+
+                                <reviews>
+
+          </reviews>
+
+
+                                <breadcrumbselements>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Informatique & Tablettes]]>                                            </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&login=PrimeValue&nav=Informatique&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>                                          </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Câbles]]>                                              </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&login=PrimeValue&nav=Informatique_Cable&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>
+        </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Autres câbles]]>                                               </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&f4=autre%2Bcable&login=PrimeValue&nav=Informatique_Cable&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>
+                        </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                </breadcrumbselements>
+
+
+
+                        </product>
+
+
+
+                        <product>
+
+
+                                <productid>3873930541</productid>
+
+
+                                <category>
+<![CDATA[Loisirs_musculation-fitness]]>                         </category>
+
+
+                                <alias>sport_produit</alias>
+
+
+                                <headline>
+<![CDATA[L'outil de formation de flexibilité de machine fendue d'extension de jambe de fer 3 d'extension de jambe pour la balance de ballet]]>                          </headline>
+
+
+                                <caption>
+<![CDATA[Xinlan]]>                              </caption>
+
+
+                                <topic>
+<![CDATA[Matériel de sport]]>                           </topic>
+
+
+                                <offercounts>
+
+
+                                        <total>1</total>
+
+
+                                        <new>1</new>
+
+
+                                        <used>0</used>
+
+
+                                        <refurbishedNew>0</refurbishedNew>
+
+
+                                        <refurbishedUsed>0</refurbishedUsed>
+
+
+                                </offercounts>
+
+
+                                <bestprices>
+
+
+
+                                        <global>
+
+
+                                                <advertprice>
+
+
+                                                        <amount>25.99</amount>
+
+
+                                                        <currency>EUR</currency>
+
+
+                                                </advertprice>
+
+
+                                                <shippingcost>
+
+
+                                                        <amount>0.0</amount>
+
+
+                                                        <currency>EUR</currency>
+
+
+                                                </shippingcost>
+
+
+                                                <shippingtype>Normal</shippingtype>
+
+
+
+                                        </global>
+
+
+
+                                </bestprices>
+
+
+                                <url>
+<![CDATA[https://fr.shopping.rakuten.com/offer/buy/3873930541/l-outil-de-formation-de-flexibilite-de-machine-fendue-d-extension-de-jambe-de-fer-3-d-extension-de-jambe-pour-la-balance-de-ballet.html]]>
+                        </url>
+
+
+
+                                <image>
+
+
+
+                                        <url>
+<![CDATA[https://images.fr.shopping.rakuten.com/photo/1256462735_ML.jpg]]>                                      </url>
+
+
+
+                                </image>
+
+
+                                <references>
+
+
+
+                                        <barcode>7360736858201</barcode>
+
+
+
+                                        <partnumber>
+<![CDATA[YogaLegStretcher-01S]]>                                        </partnumber>
+
+
+
+                                </references>
+
+
+                                <reviews>
+
+          </reviews>
+
+
+                                <breadcrumbselements>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Sports & Loisirs]]>                                            </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&login=PrimeValue&nav=Loisirs&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>                                               </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Musculation et fitness]]>                                              </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&login=PrimeValue&nav=Loisirs_musculation-fitness&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>
+                </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Traversin]]>                                           </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&f10=Traversin&login=PrimeValue&nav=Loisirs_musculation-fitness&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>
+                                </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                </breadcrumbselements>
+
+
+
+                        </product>
+
+
+
+                        <product>
+
+
+                                <productid>3769427314</productid>
+
+
+                                <category>
+<![CDATA[Informatique_Cable]]>                          </category>
+
+
+                                <alias>mev_mat_periph</alias>
+
+
+                                <headline>
+<![CDATA[CHARGEURS SECTEUR LENOVO YOGA 720 710 520 530 - 20V-3.25A-65W]]>                               </headline>
+
+
+                                <caption>
+<![CDATA[Lenovo]]>                              </caption>
+
+
+                                <topic>
+<![CDATA[Câble d'alimentation]]>                                </topic>
+
+
+                                <offercounts>
+
+
+                                        <total>2</total>
+
+
+                                        <new>2</new>
+
+
+                                        <used>0</used>
+
+
+                                        <refurbishedNew>0</refurbishedNew>
+
+
+                                        <refurbishedUsed>0</refurbishedUsed>
+
+
+                                </offercounts>
+
+
+                                <bestprices>
+
+
+
+                                        <global>
+
+
+                                                <advertprice>
+
+
+                                                        <amount>36.99</amount>
+
+
+                                                        <currency>EUR</currency>
+
+
+                                                </advertprice>
+
+
+                                                <shippingcost>
+
+
+                                                        <amount>0.0</amount>
+
+
+                                                        <currency>EUR</currency>
+
+
+                                                </shippingcost>
+
+
+                                                <shippingtype>Normal</shippingtype>
+
+
+
+                                        </global>
+
+
+
+                                </bestprices>
+
+
+                                <url>
+<![CDATA[https://fr.shopping.rakuten.com/offer/buy/3769427314/chargeurs-secteur-lenovo-yoga-530-14-20v-3-25a-65w.html]]>                                </url>
+
+
+
+                                <image>
+
+
+
+                                        <url>
+<![CDATA[https://images.fr.shopping.rakuten.com/photo/1243233685_ML.jpg]]>                                      </url>
+
+
+
+                                </image>
+
+
+                                <references>
+
+
+
+                                        <partnumber>
+<![CDATA[YOGA]]>                                        </partnumber>
+
+
+
+                                </references>
+
+
+                                <reviews>
+
+          </reviews>
+
+
+                                <breadcrumbselements>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Informatique & Tablettes]]>                                            </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&login=PrimeValue&nav=Informatique&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>                                          </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Câbles]]>                                              </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&login=PrimeValue&nav=Informatique_Cable&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>
+        </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Autres câbles]]>                                               </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&f4=autre%2Bcable&login=PrimeValue&nav=Informatique_Cable&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>
+                        </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                </breadcrumbselements>
+
+
+
+                        </product>
+
+
+
+                        <product>
+
+
+                                <productid>3711009542</productid>
+
+
+                                <category>
+<![CDATA[Tel-PDA_montres-bracelets-connectes]]>                         </category>
+
+
+                                <alias>montre_bracelet_connecte</alias>
+
+
+                                <headline>
+<![CDATA[Montre connectée]]>                            </headline>
+
+
+                                <caption>
+<![CDATA[Aneken]]>                              </caption>
+
+
+                                <topic>
+<![CDATA[ Montres et bracelets connectés ]]>                            </topic>
+
+
+                                <offercounts>
+
+
+                                        <total>4</total>
+
+
+                                        <new>0</new>
+
+
+                                        <used>4</used>
+
+
+                                        <refurbishedNew>0</refurbishedNew>
+
+
+                                        <refurbishedUsed>0</refurbishedUsed>
+
+
+                                </offercounts>
+
+
+                                <bestprices>
+
+
+
+                                        <global>
+
+
+                                                <advertprice>
+
+
+                                                        <amount>10.0</amount>
+
+
+                                                        <currency>EUR</currency>
+
+
+                                                </advertprice>
+
+
+                                                <shippingcost>
+
+
+                                                        <amount>2.99</amount>
+
+
+                                                        <currency>EUR</currency>
+
+
+                                                </shippingcost>
+
+
+                                                <shippingtype>Point relais Mondial Relay</shippingtype>
+
+
+
+                                        </global>
+
+
+
+                                </bestprices>
+
+
+                                <url>
+<![CDATA[https://fr.shopping.rakuten.com/offer/buy/3711009542/montre-connectee.html]]>                          </url>
+
+
+
+                                <image>
+
+
+
+                                        <url>
+<![CDATA[https://images.fr.shopping.rakuten.com/photo/1236973830_ML.jpg]]>                                      </url>
+
+
+
+                                </image>
+
+
+                                <references>
+
+
+
+                                        <partnumber>
+<![CDATA[Fitness wristband]]>                                   </partnumber>
+
+
+
+                                </references>
+
+
+                                <reviews>
+
+          </reviews>
+
+
+                                <breadcrumbselements>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Téléphonie et Tablettes]]>                                             </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&login=PrimeValue&nav=Tel-PDA&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>                                               </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Montres et bracelets connectés]]>                                              </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&login=PrimeValue&nav=Tel-PDA_montres-bracelets-connectes&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>
+                        </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Montre connectée (Autre)]]>                                            </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&f1=Non%2Bpr%25E9cis%25E9&f5=montre-connectee&login=PrimeValue&nav=Tel-PDA_montres-bracelets-connectes&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>                                         </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                </breadcrumbselements>
+
+
+
+                        </product>
+
+
+
+                        <product>
+
+
+                                <productid>1440533154</productid>
+
+
+                                <category>
+<![CDATA[Jeux-Video-et-Consoles_Accessoires-Jeux-Video]]>                               </category>
+
+
+                                <alias>acc_jv_produit</alias>
+
+
+                                <headline>
+<![CDATA[Manettte compatible pour SONY Ps3 - Sans fil - Blanc]]>                                </headline>
+
+
+                                <caption/>
+
+
+                                <topic>
+<![CDATA[ Manette ]]>                           </topic>
+
+
+                                <offercounts>
+
+
+                                        <total>5</total>
+
+
+                                        <new>0</new>
+
+
+                                        <used>5</used>
+
+
+                                        <refurbishedNew>0</refurbishedNew>
+
+
+                                        <refurbishedUsed>0</refurbishedUsed>
+
+
+                                </offercounts>
+
+
+                                <bestprices>
+
+
+
+                                        <global>
+
+
+                                                <advertprice>
+
+
+                                                        <amount>10.0</amount>
+
+
+                                                        <currency>EUR</currency>
+
+
+                                                </advertprice>
+
+
+                                                <shippingcost>
+
+
+                                                        <amount>2.99</amount>
+
+
+                                                        <currency>EUR</currency>
+
+
+                                                </shippingcost>
+
+
+                                                <shippingtype>Point relais Mondial Relay</shippingtype>
+
+
+
+                                        </global>
+
+
+
+                                </bestprices>
+
+
+                                <url>
+<![CDATA[https://fr.shopping.rakuten.com/offer/buy/1440533154/manettte-compatible-pour-sony-ps3-sans-fil-blanc.html]]>                          </url>
+
+
+
+                                <image>
+
+
+
+                                        <url>
+<![CDATA[https://images.fr.shopping.rakuten.com/photo/1080449437_ML.jpg]]>                                      </url>
+
+
+
+                                </image>
+
+
+                                <references>
+
+
+
+                                        <barcode>0798220024301</barcode>
+
+
+
+                                        <partnumber>
+<![CDATA[pour sony]]>                                   </partnumber>
+
+
+
+                                </references>
+
+
+                                <reviews>
+
+          </reviews>
+
+
+                                <breadcrumbselements>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Jeux vidéo & Consoles]]>                                               </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&login=PrimeValue&nav=Jeux-Video-et-Consoles&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>
+                </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Accessoires Jeux Vidéo]]>                                              </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&login=PrimeValue&nav=Jeux-Video-et-Consoles_Accessoires-Jeux-Video&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>
+                                </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Manette de jeux vidéo]]>                                               </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&f2=Manette&login=PrimeValue&nav=Jeux-Video-et-Consoles_Accessoires-Jeux-Video&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>
+                                                </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                </breadcrumbselements>
+
+
+
+                        </product>
+
+
+
+                        <product>
+
+
+                                <productid>4750010642</productid>
+
+
+                                <category>
+<![CDATA[Informatique_Ordinateur-portable]]>                            </category>
+
+
+                                <alias>laptop_produit</alias>
+
+
+                                <headline>
+<![CDATA[Lenovo Yoga 500-14ISK - 14" Intel Core i5 - 2.3 Ghz - Ram 8 Go - SSD 128 Go - Blanc]]>                         </headline>
+
+
+                                <caption>
+<![CDATA[Lenovo]]>                              </caption>
+
+
+                                <topic>
+<![CDATA[ Ordinateur portable ]]>                               </topic>
+
+
+                                <offercounts>
+
+
+                                        <total>1</total>
+
+
+                                        <new>0</new>
+
+
+                                        <used>1</used>
+
+
+                                        <refurbishedNew>0</refurbishedNew>
+
+
+                                        <refurbishedUsed>0</refurbishedUsed>
+
+
+                                </offercounts>
+
+
+                                <bestprices>
+
+
+
+                                        <global>
+
+
+                                                <advertprice>
+
+
+                                                        <amount>350.0</amount>
+
+
+                                                        <currency>EUR</currency>
+
+
+                                                </advertprice>
+
+
+                                                <shippingcost>
+
+
+                                                        <amount>4.99</amount>
+
+
+                                                        <currency>EUR</currency>
+
+
+                                                </shippingcost>
+
+
+                                                <shippingtype>Point relais Mondial Relay</shippingtype>
+
+
+
+                                        </global>
+
+
+
+                                </bestprices>
+
+
+                                <url>
+<![CDATA[https://fr.shopping.rakuten.com/offer/buy/4750010642/lenovo-yoga-500-14isk.html]]>                             </url>
+
+
+
+                                <image>
+
+          </image>
+
+
+                                <references>
+
+
+
+                                        <partnumber>
+<![CDATA[Yoga 500-14ISK]]>                                      </partnumber>
+
+
+
+                                </references>
+
+
+                                <reviews>
+
+          </reviews>
+
+
+                                <breadcrumbselements>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Informatique & Tablettes]]>                                            </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&login=PrimeValue&nav=Informatique&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>                                          </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Ordinateur portable]]>                                         </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&login=PrimeValue&nav=Informatique_Ordinateur-portable&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>
+                        </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Ordinateur portable  Lenovo]]>                                         </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&f1=Lenovo&login=PrimeValue&nav=Informatique_Ordinateur-portable&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>
+                                </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                </breadcrumbselements>
+
+
+
+                        </product>
+
+
+
+                        <product>
+
+
+                                <productid>4879977672</productid>
+
+
+                                <category>
+<![CDATA[Informatique_Cle-USB]]>                                </category>
+
+
+                                <alias>mev_memoire_flash</alias>
+
+
+                                <headline>
+<![CDATA[Clé USB externe i-Flash 3 en 1 OTG - Pour iPhone 8 / 7 / 6 / 6S / 5 / iPad et téléphones Samsung 256 Go Silver]]>                              </headline>
+
+
+                                <caption>
+<![CDATA[Yoga_Store]]>                          </caption>
+
+
+                                <topic>
+<![CDATA[ Clé USB ]]>                           </topic>
+
+
+                                <offercounts>
+
+
+                                        <total>0</total>
+
+
+                                        <new>0</new>
+
+
+                                        <used>0</used>
+
+
+                                        <refurbishedNew>0</refurbishedNew>
+
+
+                                        <refurbishedUsed>0</refurbishedUsed>
+
+
+                                </offercounts>
+
+
+                                <bestprices>
+
+          </bestprices>
+
+
+                                <url>
+<![CDATA[https://fr.shopping.rakuten.com/offer/buy/4879977672/cle-usb-externe-i-flash-3-en-1-otg-pour-iphone-8-7-6-6s-5-ipad-et-telephones-samsung-256-go-silver.html]]>                                </url>
+
+
+
+                                <image>
+
+
+
+                                        <url>
+<![CDATA[https://images.fr.shopping.rakuten.com/photo/1407935315_ML.jpg]]>                                      </url>
+
+
+
+                                </image>
+
+
+                                <references>
+
+
+
+                                        <barcode>0699917295793</barcode>
+
+
+
+                                        <partnumber>
+<![CDATA[yoga_store]]>                                  </partnumber>
+
+
+
+                                </references>
+
+
+                                <reviews>
+
+          </reviews>
+
+
+                                <breadcrumbselements>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Informatique & Tablettes]]>                                            </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&login=PrimeValue&nav=Informatique&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>                                          </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Clé USB]]>                                             </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&login=PrimeValue&nav=Informatique_Cle-USB&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>
+        </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                        <breadcrumbselement>
+
+
+                                                <label>
+<![CDATA[Clé USB   256 Go]]>                                            </label>
+
+
+                                                <url>
+<![CDATA[https://ws.fr.shopping.rakuten.com/listing_ssl_ws?action=listing&f6=256%2BGo&login=PrimeValue&nav=Informatique_Cle-USB&pwd=8bcfa56fed804c19a0c6747fd8346230&version=2018-06-28]]>
+                        </url>
+
+
+                                        </breadcrumbselement>
+
+
+
+                                </breadcrumbselements>
+
+
+
+                        </product>
+
+
+
+                </products>
+
+
+        </response>
+
+
+</listingresult>
+
+>>>
